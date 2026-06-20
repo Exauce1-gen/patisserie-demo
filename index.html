@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pâtisserie Démo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <span class="header__logo-icon">🧁</span>
+          <span class="header__logo-text">Pâtisserie Démo</span>
+        </div>
+        <nav class="header__nav" id="nav">
+          <ul class="header__nav-list">
+            <li><a href="#accueil" class="header__nav-link">Accueil</a></li>
+            <li><a href="#produits" class="header__nav-link">Produits</a></li>
+            <li>
+              <a href="#temoignages" class="header__nav-link">Témoignages</a>
+            </li>
+            <li><a href="#contact" class="header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="header__burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="accueil">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Artisanat & Passion</p>
+        <h1 class="hero__title">
+          Des créations gourmandes<br />pour tous vos événements
+        </h1>
+        <p class="hero__description">
+          Gâteaux, cupcakes, croissants et douceurs artisanales préparés avec
+          passion pour rendre chaque occasion inoubliable.
+        </p>
+        <a
+          href="https://wa.me/2290198554017"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--whatsapp"
+        >
+          <svg
+            class="btn__icon"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+            />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.117 1.532 5.845L.057 23.938a.5.5 0 0 0 .612.612l6.093-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.821 9.821 0 0 1-5.013-1.374l-.36-.213-3.715.9.916-3.618-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"
+            />
+          </svg>
+          Commander sur WhatsApp
+        </a>
+      </div>
+      <div class="hero__decoration">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
+        <div class="hero__circle hero__circle--3"></div>
+      </div>
+    </section>
+
+    <!-- ========== PRODUITS ========== -->
+    <section class="products" id="produits">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Notre Sélection</p>
+        <h2 class="section-header__title">Nos créations du moment</h2>
+        <p class="section-header__subtitle">
+          Chaque pièce est préparée à la main avec des ingrédients de qualité.
+        </p>
+      </div>
+      <div class="products__grid">
+        <!-- Carte 1 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=80"
+              alt="Gâteau d'anniversaire"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Gâteau d'anniversaire</h3>
+            <p class="product-card__price">15 000 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Gâteau d\'anniversaire')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+        <!-- Carte 2 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=600&q=80"
+              alt="Gâteau floral premium"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Gâteau floral premium</h3>
+            <p class="product-card__price">25 000 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Gâteau floral premium')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+        <!-- Carte 3 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=600&q=80"
+              alt="Gâteau chocolat framboise"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Gâteau chocolat framboise</h3>
+            <p class="product-card__price">18 000 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Gâteau chocolat framboise')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+        <!-- Carte 4 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80"
+              alt="Croissants artisanaux"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Croissants artisanaux</h3>
+            <p class="product-card__price">3 500 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Croissants artisanaux')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+        <!-- Carte 5 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600&q=80"
+              alt="Cupcakes assortis"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Cupcakes assortis</h3>
+            <p class="product-card__price">5 000 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Cupcakes assortis')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+        <!-- Carte 6 -->
+        <article class="product-card">
+          <div class="product-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80"
+              alt="Donuts gourmands"
+              class="product-card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Donuts gourmands</h3>
+            <p class="product-card__price">4 500 FCFA</p>
+            <button
+              class="btn btn--order"
+              onclick="commander('Donuts gourmands')"
+            >
+              Commander
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== POURQUOI NOUS ========== -->
+    <section class="why">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Nos engagements</p>
+        <h2 class="section-header__title">Pourquoi nous choisir ?</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__card">
+          <div class="why__icon">🌿</div>
+          <h3 class="why__title">Produits frais</h3>
+          <p class="why__text">
+            Nous utilisons uniquement des ingrédients frais, sourcés localement
+            chaque matin.
+          </p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">🤲</div>
+          <h3 class="why__title">Fabrication artisanale</h3>
+          <p class="why__text">
+            Toutes nos créations sont façonnées à la main, avec soin et
+            expertise.
+          </p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">🎨</div>
+          <h3 class="why__title">Commandes personnalisées</h3>
+          <p class="why__text">
+            Votre événement est unique. Nous créons sur-mesure selon vos envies
+            et vos couleurs.
+          </p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">🚀</div>
+          <h3 class="why__title">Livraison rapide</h3>
+          <p class="why__text">
+            Nous livrons dans les délais convenus pour que votre commande arrive
+            fraîche et parfaite.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TÉMOIGNAGES ========== -->
+    <section class="testimonials" id="temoignages">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Ils nous font confiance</p>
+        <h2 class="section-header__title">Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">
+            "Le gâteau d'anniversaire était absolument divin ! Toute ma famille
+            a été bluffée par la décoration et le goût. Je recommande vivement
+            cette pâtisserie."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">A</div>
+            <div>
+              <strong>Amina K.</strong>
+              <span>Cotonou</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">
+            "J'ai commandé les cupcakes pour le mariage de ma fille. Ils étaient
+            magnifiques et délicieux. Le service WhatsApp est super réactif,
+            commande livrée à temps !"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">M</div>
+            <div>
+              <strong>Mariam T.</strong>
+              <span>Porto-Novo</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">
+            "Les croissants artisanaux sont une révélation ! Je commande chaque
+            semaine depuis 3 mois. La qualité est toujours au rendez-vous,
+            sans exception."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">J</div>
+            <div>
+              <strong>Jean-Paul D.</strong>
+              <span>Parakou</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+      <div class="contact__content">
+        <p class="section-header__eyebrow" style="color: #f9a8c9">
+          Contactez-nous
+        </p>
+        <h2 class="contact__title">Prête à créer votre douceur ?</h2>
+        <p class="contact__subtitle">
+          Écrivez-nous directement sur WhatsApp pour toute commande ou
+          question. Réponse rapide garantie.
+        </p>
+        <a
+          href="https://wa.me/2290198554017"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--whatsapp btn--large"
+        >
+          <svg
+            class="btn__icon"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+            />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.117 1.532 5.845L.057 23.938a.5.5 0 0 0 .612.612l6.093-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.821 9.821 0 0 1-5.013-1.374l-.36-.213-3.715.9.916-3.618-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"
+            />
+          </svg>
+          +229 01 98 55 40 17
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <p class="footer__text">
+        © 2026 Tous droits réservés &mdash;
+        <strong>TOVI Exaucé</strong>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
